@@ -1,0 +1,578 @@
+/* =====================================================
+   SAKTHI NIVETHA E
+   PORTFOLIO SETTINGS
+
+   Change your email and LinkedIn here.
+===================================================== */
+
+const portfolio = {
+
+    email: "yourmail@example.com",
+
+    github: "https://github.com/mailmesakthi",
+
+    linkedin: "YOUR_LINKEDIN_URL"
+
+};
+
+
+/* ================= CONNECT LINKS ================= */
+
+document.getElementById("emailLink").href =
+    `mailto:${portfolio.email}`;
+
+document.getElementById("emailText").textContent =
+    portfolio.email;
+
+
+document.getElementById("githubLink").href =
+    portfolio.github;
+
+document.getElementById("githubContact").href =
+    portfolio.github;
+
+
+document.getElementById("linkedinLink").href =
+    portfolio.linkedin;
+
+document.getElementById("linkedinContact").href =
+    portfolio.linkedin;
+
+
+/* ================= MOBILE MENU ================= */
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const navMenu =
+    document.getElementById("navMenu");
+
+
+menuBtn.addEventListener("click", function () {
+
+    navMenu.classList.toggle("active");
+
+});
+
+
+/* Close mobile menu after clicking */
+
+document.querySelectorAll("nav a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        navMenu.classList.remove("active");
+
+    });
+
+});
+
+
+/* ================= CURRENT YEAR ================= */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+/* ================= RESUME ================= */
+
+document
+    .getElementById("downloadResume")
+    .addEventListener("click", function () {
+
+        const resumeWindow =
+            window.open("", "_blank");
+
+
+        resumeWindow.document.write(`
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Sakthi Nivetha E - Resume</title>
+
+<style>
+
+@page {
+
+    size: A4;
+
+    margin: 15mm;
+
+}
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    color: #202733;
+
+    line-height: 1.45;
+
+    margin: 0;
+
+}
+
+h1 {
+
+    margin: 0;
+
+    font-size: 28px;
+
+}
+
+h2 {
+
+    font-size: 15px;
+
+    color: #3563e9;
+
+    border-bottom: 1px solid #dfe4eb;
+
+    padding-bottom: 5px;
+
+    margin-top: 20px;
+
+}
+
+h3 {
+
+    font-size: 14px;
+
+    margin: 8px 0 2px;
+
+}
+
+p {
+
+    font-size: 11px;
+
+    margin: 5px 0;
+
+}
+
+ul {
+
+    margin-top: 4px;
+
+    padding-left: 18px;
+
+}
+
+li {
+
+    font-size: 10.5px;
+
+    margin-bottom: 2px;
+
+}
+
+.header {
+
+    text-align: center;
+
+    border-bottom: 2px solid #3563e9;
+
+    padding-bottom: 12px;
+
+}
+
+.subtitle {
+
+    color: #3563e9;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+}
+
+.contact {
+
+    margin-top: 5px;
+
+    font-size: 10px;
+
+    color: #5e6878;
+
+}
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+.tag {
+
+    font-weight: bold;
+
+    color: #424c5c;
+
+}
+
+.project {
+
+    margin-bottom: 12px;
+
+}
+
+.footer-note {
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-size: 9px;
+
+    color: #8992a0;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="header">
+
+    <h1>
+        SAKTHI NIVETHA E
+    </h1>
+
+    <div class="subtitle">
+        AI & Data Science Student | Aspiring Data Analyst
+    </div>
+
+    <div class="contact">
+
+        ${portfolio.email}
+        |
+        ${portfolio.github}
+        |
+        ${portfolio.linkedin}
+
+    </div>
+
+</div>
+
+
+<h2>
+    PROFESSIONAL SUMMARY
+</h2>
+
+<p>
+
+Motivated B.Tech Artificial Intelligence and Data Science student
+with an interest in Data Analytics, Python, SQL and problem solving.
+Currently developing practical skills through academic learning and
+beginner-level projects. Interested in gaining real-world experience
+and contributing to data-driven projects while continuously improving
+technical and analytical abilities.
+
+</p>
+
+
+<div class="grid">
+
+
+<div>
+
+<h2>
+    EDUCATION
+</h2>
+
+<h3>
+    B.Tech – Artificial Intelligence & Data Science
+</h3>
+
+<p>
+
+VSB College of Engineering Technical Campus
+
+<br>
+
+2025 – 2029
+
+</p>
+
+<p>
+    <strong>CGPA: 8.19</strong>
+</p>
+
+<p>
+    12th — 89%
+</p>
+
+<p>
+    10th — 90%
+</p>
+
+
+<h2>
+    TECHNICAL SKILLS
+</h2>
+
+<p>
+    <span class="tag">Programming:</span>
+    Python, Java, C
+</p>
+
+<p>
+    <span class="tag">Database:</span>
+    SQL, DBMS
+</p>
+
+<p>
+    <span class="tag">Data Analytics:</span>
+    Python-based data analysis, basic data visualization
+</p>
+
+<p>
+    <span class="tag">Core:</span>
+    Data Structures, OOP, CRUD Operations
+</p>
+
+<p>
+    <span class="tag">Tools:</span>
+    Git, GitHub, VS Code
+</p>
+
+<p>
+    <span class="tag">Currently Learning:</span>
+    Pandas, APIs, Data Analytics
+</p>
+
+</div>
+
+
+<div>
+
+
+<h2>
+    CERTIFICATIONS
+</h2>
+
+<ul>
+
+<li>
+    Cisco – Python Essentials 1
+</li>
+
+<li>
+    Data Analytics Achievement Certificate
+</li>
+
+<li>
+    SQL / Database Design Certification
+</li>
+
+</ul>
+
+
+<h2>
+    RELEVANT COURSEWORK
+</h2>
+
+<ul>
+
+<li>
+    Python Programming
+</li>
+
+<li>
+    Data Structures & Algorithms
+</li>
+
+<li>
+    Database Management Systems
+</li>
+
+<li>
+    Object-Oriented Programming
+</li>
+
+<li>
+    Discrete Mathematics
+</li>
+
+<li>
+    Data Science Fundamentals
+</li>
+
+</ul>
+
+
+<h2>
+    STRENGTHS
+</h2>
+
+<ul>
+
+<li>
+    Willingness to learn
+</li>
+
+<li>
+    Problem-solving mindset
+</li>
+
+<li>
+    Communication
+</li>
+
+<li>
+    Team collaboration
+</li>
+
+<li>
+    Continuous learning
+</li>
+
+<li>
+    Adaptability
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<h2>
+    PROJECTS
+</h2>
+
+
+<div class="project">
+
+<h3>
+    Student Management System — Python | CRUD
+</h3>
+
+<ul>
+
+<li>
+    Developed a beginner-friendly student management application.
+</li>
+
+<li>
+    Implemented CRUD operations for managing student information.
+</li>
+
+<li>
+    Stored and managed student details including name, age, email,
+    department and roll number.
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="project">
+
+<h3>
+    To-Do List Application — Python
+</h3>
+
+<ul>
+
+<li>
+    Created a simple application to manage daily tasks.
+</li>
+
+<li>
+    Practiced Python programming and application logic.
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="project">
+
+<h3>
+    Python Data Analysis Project — Python | Data Analysis
+</h3>
+
+<ul>
+
+<li>
+    Worked with datasets to understand and analyze data.
+</li>
+
+<li>
+    Practiced basic data cleaning and analysis techniques.
+</li>
+
+<li>
+    Created visual representations to understand patterns and trends.
+</li>
+
+</ul>
+
+</div>
+
+
+<h2>
+    CAREER OBJECTIVE
+</h2>
+
+<p>
+
+To begin my career in a learning-oriented environment where I can
+apply my knowledge of Python, SQL and Data Analytics, gain practical
+industry experience and grow into a skilled Data Analyst.
+
+</p>
+
+
+<div class="footer-note">
+
+Sakthi Nivetha E • AI & Data Science • Aspiring Data Analyst
+
+</div>
+
+
+<script>
+
+window.onload = function () {
+
+    window.print();
+
+};
+
+<\/script>
+
+
+</body>
+
+</html>
+
+        `);
+
+
+        resumeWindow.document.close();
+
+    });
